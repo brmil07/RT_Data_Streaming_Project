@@ -13,6 +13,15 @@ components, ensuring a cohesive and efficient data engineering solution. Whether
 processing needs, this project provides a scalable and adaptable architecture to meet modern data demands.
 
 ---
+
+Tested on:
+- Windows 11
+- Docker version 27.1.1
+- Python 3.11
+- Java 17
+- Hadoop 3.4.0
+- Spark 3.4.1
+
 ## References:
 * [Real Time Data Streaming Project](https://github.com/airscholar/e2e-data-engineering)
 * [Realtime Data Streaming | End To End Data Engineering Project](https://www.youtube.com/watch?v=GqAcTrqKcrY&list=WL&index=18&t=253s)

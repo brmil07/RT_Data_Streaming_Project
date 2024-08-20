@@ -162,7 +162,7 @@ services:
       - confluent
 
   spark-master:
-    image: bitnami/spark:latest
+    image: bitnami/spark:3.5.1
     command: bin/spark-class org.apache.spark.deploy.master.Master
     ports:
       - "9090:8080"
@@ -170,7 +170,7 @@ services:
     networks:
       - confluent
   spark-worker:
-    image: bitnami/spark:latest
+    image: bitnami/spark:3.5.1
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     depends_on:
       - spark-master
@@ -183,7 +183,7 @@ services:
       - confluent
 
   cassandra_db:
-    image: cassandra:latest
+    image: cassandra:4.1.6
     container_name: cassandra
     hostname: cassandra
     ports:
@@ -195,5 +195,11 @@ services:
       - CASSANDRA_PASSWORD=cassandra
     networks:
       - confluent
+    healthcheck:
+      test: ["CMD", "cqlsh", "--execute", "SELECT now() FROM system.local;"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
 networks:
   confluent:

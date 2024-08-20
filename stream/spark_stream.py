@@ -92,6 +92,7 @@ def connect_to_kafka(spark_conn):
             .option('kafka.bootstrap.servers', 'localhost:9092') \
             .option('subscribe', 'users_created') \
             .option('startingOffsets', 'earliest') \
+            .option("failOnDataLoss", "false") \
             .load()
         logging.info("Kafka DataFrame created successfully")
     except Exception as e:
