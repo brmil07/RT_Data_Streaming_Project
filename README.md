@@ -31,6 +31,8 @@ cd RT_Data_Streaming
 - Hadoop 3.4.0
 - Spark 3.4.1
 ---
+# **Documentation**
+* [Usage Guide](guide/usage.md): Instructions on setting up and using the services.
 # **References**:
 * [Real Time Data Streaming Project](https://github.com/airscholar/e2e-data-engineering)
 * [Realtime Data Streaming | End To End Data Engineering Project](https://www.youtube.com/watch?v=GqAcTrqKcrY&list=WL&index=18&t=253s)

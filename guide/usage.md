@@ -2,7 +2,7 @@
 # **Usage Guide**
 This Docker container creates a comprehensive data engineering pipeline with components for streaming data, workflow management, and distributed processing. The services include Kafka, Schema Registry, Control Center, ZooKeeper Airflow, PostgreSQL, and Cassandra as shown in figure below.
 
-![System Architecture Figure](https://github.com/brmil07/RT_Data_Streaming_Project/blob/main/System_Architecture_2.png)
+![System Architecture Figure](https://github.com/brmil07/RT_Data_Streaming_Project/blob/main/guide/System_Architecture_2.png)
 
 # **Getting Started**
 ## **1. Navigate to the Directory**
