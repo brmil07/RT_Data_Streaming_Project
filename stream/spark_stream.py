@@ -2,7 +2,9 @@ import logging
 import uuid
 import signal
 import sys
+
 from cassandra.cluster import Cluster
+from cassandra.policies import RoundRobinPolicy
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col
 from pyspark.sql.types import StructType, StructField, StringType
@@ -104,11 +106,13 @@ def connect_to_kafka(spark_conn):
 
 def create_cassandra_connection():
     try:
-        # connecting to the cassandra cluster
-        cluster = Cluster(['localhost'])
-
+        cluster = Cluster(
+            ['localhost'],
+            load_balancing_policy=RoundRobinPolicy(),
+            protocol_version=5
+        )
         cas_session = cluster.connect()
-
+        logging.info("Cassandra connection established successfully.")
         return cas_session
     except Exception as e:
         logging.error(f"Could not create cassandra connection due to {e}")
