@@ -39,11 +39,13 @@ Enter the username and password, and then trigger the DAG
 
 ## **3. Monitor Streamed Data**
 After DAG file is triggered, the streamed data can be monitored in the control center.
-NAvigate to the browser and type:
+Navigate to the browser and type:
 ```bash
 localhost:9021
 ```
 ![control center topic](https://github.com/brmil07/RT_Data_Streaming_Project/blob/main/guide/control_center.png)
+
+The data streamed from the random user api can be seen here:
 
 ![control center monitor](https://github.com/brmil07/RT_Data_Streaming_Project/blob/main/guide/control_center_data_stream.png)
 
