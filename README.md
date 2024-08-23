@@ -1,6 +1,6 @@
 ***
 # **Real-Time Data Streaming Data Engineering Project**
-![System Architecture Figure](https://github.com/brmil07/RT_Data_Streaming_Project/blob/main/System_Architecture_1.png)
+![System Architecture Figure](https://github.com/brmil07/RT_Data_Streaming_Project/blob/main/System_Architecture.png)
 
 <!-- Justified Text -->
 <div style="text-align: justify;">
